@@ -7,16 +7,16 @@ public class PaliDP {
 		return (x > y) ? x : y;
 	}
 
-	static int lps(String []input1) {
-		
+	static int lps(String[] input1) {
+
 		String str = "";
-		
+
 		for (String string : input1) {
 			str = str.concat(Character.toString(string.charAt(0)));
 		}
-			
+
 		System.out.println(str);
-		int n = str.length() ;
+		int n = str.length();
 		int i, j, cl;
 		int table[][] = new int[n][n];
 
@@ -40,7 +40,7 @@ public class PaliDP {
 
 	/* Driver program to test above functions */
 	public static void main(String[] args) {
-String []a = {"B","B","A","B","C","B","C","A","B"};
+		String[] a = { "B", "B", "A", "B", "C", "B", "C", "A", "B" };
 		System.out.println(lps(a));
 	}
 }

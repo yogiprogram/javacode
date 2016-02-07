@@ -1,8 +1,5 @@
 package com.linklist;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
-import com.tree.TreeNode;
-
 public class ListHandler {
 
 	ListNode root;

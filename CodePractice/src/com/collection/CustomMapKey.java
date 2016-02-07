@@ -53,4 +53,9 @@ class Person {
 		// return super.toString();
 	}
 
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
 }
