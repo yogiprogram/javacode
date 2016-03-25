@@ -111,25 +111,26 @@ public class Equilibrium {
 		int sumr = 0;
 		int len = A.length;
 		if (len == 0)
-			return 0;
+			return -1;
 		int start = 0;
 		suml = A[start];
 		int result = 0;
 		for (int i = start + 2; i < len; i++) {
 			sumr += A[i];
 		}
-System.out.println(sumr + " " +suml);
+		System.out.println(sumr + " " + suml);
 		for (int i = start + 2; i < len; i++) {
 			if (suml == sumr)
-				return i-1;
-			sumr  = sumr - A[i];
-			suml += A[i-1];
+				return i - 1;
+			sumr = sumr - A[i];
+			suml += A[i - 1];
 		}
 		return -1;
 	}
 
 	public static void main(String[] args) {
-		int A[] = {2, 3, 2, 3, 2 };
+		//int A[] = { 2, 3, 2, 3, 2 };
+		int A[] = {0, -2147483648, -2147483648};
 		System.out.println(new Equilibrium().solution(A));
 	}
 }

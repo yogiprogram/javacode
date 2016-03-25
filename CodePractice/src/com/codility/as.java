@@ -1,5 +1,7 @@
 package com.codility;
 
+import java.util.Arrays;
+
 //https://codility.com/c/feedback/4FBYEC-QG7
 public class as {
 	public int solution(int[] A) {
@@ -50,5 +52,7 @@ public class as {
 	public static void main(String[] args) {
 		int arr[] = { 0, 3, 3, 7, 5, 3, 11, 1 };
 		System.out.println(new as().solution(arr));
+		
+		//java.util.Arrays.sort(a);
 	}
 }

@@ -15,40 +15,27 @@ small_range
 range sequence, length = ~1,000
  
  */
+//https://codility.com/demo/results/trainingCKQNTN-38Y/
 public class TapeEquilibrium {
 	public int solution(int[] A) {
-		int[] diff;
-		int sum1;
-		int sum2 = 0;
-		int localMin;
-		diff = new int[A.length - 1];
-
-		// AT P=1 sum1=A[0]
-		sum1 = A[0];
-
+		if (A.length == 0)
+			return 0;
+		if (A.length == 1)
+			return A[0];
+		int sum = 0;
+		for (int i = 0; i < A.length; i++) {
+			sum += A[i];
+		}
+		int left = A[0];
+		int right = sum - A[0];
+		int min = 1000000;
 		for (int i = 1; i < A.length; i++) {
-			sum2 += A[i];
+			min = Math.min(min, Math.abs(left - right));
+			left += A[i];
+			right = sum - left;
 		}
+		return min;
 
-		for (int p = 1; p < A.length; p++) {
-			localMin = Math.abs(sum1 - sum2);
-
-			// advance the sum1, sum2
-			sum1 += A[p];
-			sum2 -= A[p];
-			diff[p - 1] = localMin;
-		}
-		return (getMinVal(diff));
-	}
-
-	public int getMinVal(int[] arr) {
-		int minValue = arr[0];
-		for (int i = 1; i < arr.length; i++) {
-			if (arr[i] < minValue) {
-				minValue = arr[i];
-			}
-		}
-		return minValue;
 	}
 
 	public static void main(String[] args) {
