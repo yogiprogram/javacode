@@ -58,4 +58,9 @@ class Person {
 		// TODO Auto-generated method stub
 		return 1;
 	}
+	@Override
+	public boolean equals(Object obj) {
+	     Person person =(Person) obj;
+		return person.name.equals(this.name) && person.age == this.age;
+	}
 }

@@ -35,13 +35,13 @@ public class ListHandler {
 		ListNode current = root;
 		ListNode prev = null;
 		ListNode next = null;
-		int count = 0 ;
-		while(current != null && count < 3){
+		 
+		while(current != null ){
 			next = current.next;
 			current.next = prev;
 			prev = current;
 			current = next;
-			count ++;
+		 
 		}
 		//prev.next = next;
 		root = prev;

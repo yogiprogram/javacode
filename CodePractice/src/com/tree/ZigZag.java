@@ -19,12 +19,12 @@ public class ZigZag {
 		tree.insertNode(20);
 		tree.insertNode(17);
 		tree.insertNode(21);
-		tree.riverse(tree.root);
-		//tree.inorder(tree.root);
+		//tree.riverse(tree.root);
+		tree.inorder(tree.root);
 		// tree.display();
 		// tree.preOrder(tree.root);
 
-		//zigzagprint(tree.root);
+		zigzagprint(tree.root);
 		
 	}
 

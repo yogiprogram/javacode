@@ -42,15 +42,15 @@ public class HashMapValueSort {
 			Map.Entry entry = (Map.Entry) it.next();
 			sortedHashMap.put(entry.getKey(), entry.getValue());
 		}
-		
+
 		System.out.println("after Sorting:");
-		  set = sortedHashMap.entrySet();
-		  iterator = set.iterator();
+		set = sortedHashMap.entrySet();
+		iterator = set.iterator();
 		while (iterator.hasNext()) {
 			Map.Entry me = (Map.Entry) iterator.next();
 			System.out.print(me.getKey() + "\t: ");
 			System.out.println(me.getValue());
 		}
-		
+
 	}
 }
